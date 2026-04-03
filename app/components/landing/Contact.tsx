@@ -22,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6 noise-bg" id="contact">
+    <section className="relative py-24 overflow-hidden border-t border-white/10 noise-bg" id="contact">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 60% 40%, rgba(27,43,75,0.6) 0%, transparent 60%)" }}

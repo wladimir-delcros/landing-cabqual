@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Search, Layers, GraduationCap, ClipboardCheck, Trophy } from "lucide-react";
 
 const steps = [
   {
     num: "01",
+    icon: Search,
     title: "Diagnostic initial de votre situation",
     desc: "Nous analysons votre niveau de maturité par rapport à la norme visée : processus existants, documentation en place, culture qualité, risques identifiés. Vous obtenez une cartographie précise de votre point de départ et un plan d'action réaliste.",
     deliverable: "Rapport de diagnostic + plan d'action chiffré",
@@ -15,6 +16,7 @@ const steps = [
   },
   {
     num: "02",
+    icon: Layers,
     title: "Construction de votre système de management",
     desc: "Vos consultants Cab'Qual co-construisent avec vous la documentation, les processus et les indicateurs exigés par la norme. Pas de modèle générique : chaque livrable est adapté à votre secteur, votre taille et votre organisation réelle.",
     deliverable: "SMQ complet, documenté et approprié par vos équipes",
@@ -24,6 +26,7 @@ const steps = [
   },
   {
     num: "03",
+    icon: GraduationCap,
     title: "Formation et montée en compétence",
     desc: "Nous formons vos auditeurs internes et responsables qualité avec des programmes certifiants (jusqu'à 10 formations disponibles). Vos équipes maîtrisent la norme et peuvent piloter le système en autonomie après la certification.",
     deliverable: "Équipes formées, auditeurs internes certifiés",
@@ -33,6 +36,7 @@ const steps = [
   },
   {
     num: "04",
+    icon: ClipboardCheck,
     title: "Audit à blanc avant certification",
     desc: "Avant l'audit officiel de l'organisme certificateur, nous simulons la journée d'audit dans les conditions réelles. Chaque écart est identifié et corrigé. Vous arrivez à l'audit de certification avec la certitude d'être prêt.",
     deliverable: "Rapport d'audit blanc + plan de levée des écarts",
@@ -42,6 +46,7 @@ const steps = [
   },
   {
     num: "05",
+    icon: Trophy,
     title: "Certification obtenue et pilotage continu",
     desc: "Vous obtenez votre certificat. Mais la mission ne s'arrête pas là : hotline illimitée, accompagnement aux audits de surveillance, mise à jour de votre système à chaque évolution normative. Votre certification reste vivante.",
     deliverable: "Certificat obtenu + accompagnement post-certification",
@@ -53,7 +58,7 @@ const steps = [
 
 export default function SolutionSteps() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="methode">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="methode">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(27,43,75,0.5) 0%, transparent 60%)" }}
@@ -80,8 +85,8 @@ export default function SolutionSteps() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="section-h2 text-white mb-5"
           >
-            Votre certification ISO,{" "}
-            <span className="text-gold">en 5 étapes structurées</span>
+            Une méthodologie structurée,{" "}
+            <span className="text-gold">de l'état des lieux à la certification obtenue.</span>
           </motion.h2>
 
           <motion.p
@@ -91,14 +96,17 @@ export default function SolutionSteps() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-slate-400 text-base leading-relaxed"
           >
-            Une méthodologie éprouvée sur 300+ projets, adaptée à chaque norme et chaque secteur.
-            Du diagnostic initial à la certification obtenue — et au-delà.
+            Éprouvée sur plus de 300 projets de certification, notre approche en cinq étapes
+            est adaptée à chaque norme ISO et à chaque secteur d'activité. Du diagnostic initial
+            jusqu'au maintien de la certification sur le long terme.
           </motion.p>
         </div>
 
         {/* Steps */}
         <div className="space-y-8">
-          {steps.map((step, i) => (
+          {steps.map((step, i) => {
+            const Icon = step.icon;
+            return (
             <motion.div
               key={step.num}
               initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
@@ -108,11 +116,14 @@ export default function SolutionSteps() {
               className="corp-card rounded-sm p-7 lg:p-8 hover-glow"
             >
               <div className="grid lg:grid-cols-[auto_1fr_auto] gap-6 lg:gap-10 items-start">
-                {/* Step number */}
-                <div className="flex lg:flex-col items-center lg:items-start gap-4 lg:gap-0">
+                {/* Step number + icon */}
+                <div className="flex lg:flex-col items-center lg:items-start gap-4 lg:gap-3">
                   <span className="text-[#C8A96E]/30 font-bold text-5xl leading-none tracking-tighter">
                     {step.num}
                   </span>
+                  <div className="w-9 h-9 rounded-sm bg-[#C8A96E]/10 border border-[#C8A96E]/20 flex items-center justify-center hidden lg:flex">
+                    <Icon className="w-4 h-4 text-[#C8A96E]" />
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -121,7 +132,7 @@ export default function SolutionSteps() {
                   <p className="text-slate-400 text-sm leading-relaxed mb-5">{step.desc}</p>
 
                   {/* Objection */}
-                  <div className="border border-white/6 rounded-sm p-4 bg-white/2">
+                  <div className="border border-white/8 rounded-sm p-4 bg-white/2">
                     <p className="text-slate-500 text-xs mb-1.5 flex items-center gap-1.5">
                       <span className="text-[#C8A96E]">ℹ</span>
                       &ldquo;{step.objection}&rdquo;
@@ -147,7 +158,8 @@ export default function SolutionSteps() {
                 </div>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA */}

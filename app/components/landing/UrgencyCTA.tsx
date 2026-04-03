@@ -18,7 +18,7 @@ const guarantees = [
 
 export default function UrgencyCTA() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="urgence">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="urgence">
       {/* Strong gradient BG */}
       <div
         className="absolute inset-0 pointer-events-none"

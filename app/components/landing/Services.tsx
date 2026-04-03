@@ -65,7 +65,7 @@ const item = {
 
 export default function Services() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="services">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="services">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
         style={{ background: "radial-gradient(ellipse at center top, rgba(200,169,110,0.04) 0%, transparent 70%)" }}

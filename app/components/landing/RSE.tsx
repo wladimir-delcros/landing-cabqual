@@ -28,7 +28,7 @@ const rseServices = [
 
 export default function RSE() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6 noise-bg" id="rse">
+    <section className="relative py-24 overflow-hidden border-t border-white/10 noise-bg" id="rse">
       {/* Gradient */}
       <div
         className="absolute inset-0 pointer-events-none"

@@ -65,7 +65,7 @@ const item = {
 
 export default function Testimonials() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="temoignages">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="temoignages">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.03) 0%, transparent 60%)" }}
@@ -150,7 +150,7 @@ export default function Testimonials() {
               </div>
 
               {/* Author */}
-              <div className="mt-5 pt-4 border-t border-white/6">
+              <div className="mt-5 pt-4 border-t border-white/8">
                 <p className="text-white font-semibold text-sm">{t.name}</p>
                 <p className="text-slate-500 text-xs mt-0.5">{t.company}</p>
               </div>

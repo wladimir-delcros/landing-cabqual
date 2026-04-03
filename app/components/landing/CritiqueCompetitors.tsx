@@ -37,7 +37,7 @@ const cabqual = [
 
 export default function CritiqueCompetitors() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="pourquoi-nous">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="pourquoi-nous">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 80% 40%, rgba(200,169,110,0.03) 0%, transparent 60%)" }}

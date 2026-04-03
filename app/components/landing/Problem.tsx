@@ -1,28 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AlertCircle, ArrowRight } from "lucide-react";
+import { AlertCircle, ArrowRight, Clock, FileWarning, RefreshCw, Users } from "lucide-react";
 
 const pains = [
   {
-    icon: "⏳",
-    title: "Vous perdez des mois sur des démarches administratives",
-    desc: "Décoder les exigences normatives, rédiger la documentation, gérer les non-conformités — sans savoir si vous êtes sur la bonne voie.",
+    icon: Clock,
+    title: "Des mois mobilisés sur des démarches administratives",
+    desc: "Décoder les exigences normatives, rédiger la documentation, gérer les non-conformités — sans repère fiable ni méthode éprouvée pour avancer efficacement.",
   },
   {
-    icon: "📋",
-    title: "Votre auditeur de certification vous stresse",
-    desc: "L'audit de certification approche et vous n'êtes pas certain que vos processus, vos preuves et votre système soient vraiment prêts.",
+    icon: FileWarning,
+    title: "Une incertitude persistante avant l'audit de certification",
+    desc: "L'échéance approche et la conformité réelle de vos processus, de vos preuves et de votre système documentaire reste difficile à évaluer sans regard extérieur.",
   },
   {
-    icon: "🔄",
-    title: "Vous recommencez à zéro à chaque renouvellement",
-    desc: "Le SMQ ou le système RSE vit sur le papier mais pas dans les pratiques quotidiennes — et chaque audit de surveillance repart de zéro.",
+    icon: RefreshCw,
+    title: "Un système qui repart de zéro à chaque renouvellement",
+    desc: "Le SMQ ou la démarche RSE existe sur le papier, mais n'est pas ancré dans les pratiques quotidiennes — chaque audit de surveillance le révèle.",
   },
   {
-    icon: "🧩",
-    title: "Votre équipe ne s'approprie pas la démarche",
-    desc: "Qualité, sécurité, environnement restent des contraintes pour vos collaborateurs plutôt qu'une culture d'amélioration continue.",
+    icon: Users,
+    title: "Des équipes qui peinent à s'approprier la démarche",
+    desc: "Qualité, sécurité, environnement demeurent perçus comme des contraintes par vos collaborateurs, au lieu de devenir une culture d'amélioration continue.",
   },
 ];
 
@@ -70,8 +70,8 @@ export default function Problem() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="section-h2 text-white mb-5"
           >
-            Franchement, est-ce vraiment comme ça{" "}
-            <span className="text-gold">que vous voulez obtenir votre certification ?</span>
+            Les obstacles que rencontrent{" "}
+            <span className="text-gold">la majorité des organisations sans accompagnement.</span>
           </motion.h2>
 
           <motion.p
@@ -81,8 +81,9 @@ export default function Problem() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-slate-400 text-lg leading-relaxed"
           >
-            Trop d'entreprises abordent leurs démarches ISO seules — et le paient en temps perdu,
-            en stress avant audit, ou en certifications obtenues mais jamais vraiment intégrées.
+            La plupart des entreprises engagent leurs démarches ISO sans accompagnement structuré
+            — et en mesurent le coût en temps perdu, en certifications fragiles ou en systèmes
+            documentaires jamais vraiment intégrés dans le quotidien opérationnel.
           </motion.p>
         </div>
 
@@ -94,15 +95,20 @@ export default function Problem() {
           viewport={{ once: true, margin: "-60px" }}
           className="grid md:grid-cols-2 gap-5 mb-14"
         >
-          {pains.map((pain) => (
-            <motion.div key={pain.title} variants={item} className="corp-card rounded-sm p-6 hover-glow">
-              <div className="text-2xl mb-4">{pain.icon}</div>
-              <h3 className="text-white font-semibold text-base mb-2 leading-snug">
-                {pain.title}
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{pain.desc}</p>
-            </motion.div>
-          ))}
+          {pains.map((pain) => {
+            const Icon = pain.icon;
+            return (
+              <motion.div key={pain.title} variants={item} className="corp-card rounded-sm p-6 hover-glow">
+                <div className="w-10 h-10 rounded-sm bg-[#C8A96E]/8 border border-[#C8A96E]/15 flex items-center justify-center mb-5">
+                  <Icon className="w-5 h-5 text-[#C8A96E]" />
+                </div>
+                <h3 className="text-white font-semibold text-base mb-2 leading-snug">
+                  {pain.title}
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{pain.desc}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* CTA block */}

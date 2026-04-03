@@ -25,7 +25,7 @@ const values = [
 
 export default function About() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="about">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="about">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(27,43,75,0.5) 0%, transparent 60%)" }}

@@ -30,7 +30,7 @@ export default function LogoCloud() {
   const doubled = [...sectors, ...sectors];
 
   return (
-    <section className="relative py-16 overflow-hidden border-b border-white/6">
+    <section className="relative py-16 overflow-hidden border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

@@ -24,7 +24,7 @@ const issues = [
 
 export default function CritiqueCurrentWay() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6" id="approche">
+    <section className="relative py-24 overflow-hidden border-t border-white/10" id="approche">
       {/* BG */}
       <div
         className="absolute inset-0 pointer-events-none"

@@ -50,7 +50,7 @@ const item = {
 
 export default function CostOfInaction() {
   return (
-    <section className="relative py-24 overflow-hidden border-t border-white/6 noise-bg" id="enjeux">
+    <section className="relative py-24 overflow-hidden border-t border-white/10 noise-bg" id="enjeux">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(27,43,75,0.6) 0%, transparent 70%)" }}

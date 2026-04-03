@@ -46,7 +46,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <div className="hero-h1 text-white mb-6">
+          <div className="hero-h1 text-white mb-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -60,14 +60,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-gold"
             >
-              sans perdre 18 mois
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              à piloter seul vos démarches.
+              avec méthode et garantie de résultat.
             </motion.div>
           </div>
 
@@ -76,10 +69,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="text-slate-300 text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
+            className="text-slate-300 text-lg lg:text-xl leading-relaxed mb-12 max-w-2xl"
           >
-            Cab&apos;Qual accompagne les PME et grandes entreprises dans leurs certifications
-            ISO et stratégies RSE depuis 20 ans — avec méthode, sans jargon, avec résultats.
+            Cab&apos;Qual accompagne les PME et organisations de toutes tailles dans leurs démarches
+            de certification ISO et leurs stratégies RSE depuis 2004. Conseil structuré,
+            méthodologie éprouvée, résultats mesurables.
           </motion.p>
 
           {/* CTAs */}
@@ -109,9 +103,9 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.65 }}
-            className="text-slate-500 text-sm mb-12"
+            className="text-slate-500 text-sm mb-14"
           >
-            Premier entretien gratuit et sans engagement — réponse sous 24h
+            Entretien de diagnostic offert — Réponse sous 24 heures ouvrées — Sans engagement
           </motion.p>
 
           {/* Trust signals */}
